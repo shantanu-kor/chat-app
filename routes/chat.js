@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
         if (data === undefined) {
             data = "";
         }
-        res.send(`<p>${data}<p><form action="/" method="POST" onsubmit="submitHandler(event)"><input type="text" name="message" placeholder="Message" id="message"><button type="submit">Send</button></form><script>const submitHandler = event => {document.getElementById("message").value = localStorage.getItem("username") + " : " + document.getElementById("message").value}</script>`);
+        res.send(`<pre>${data}<pre><form action="/" method="POST" onsubmit="submitHandler(event)"><input type="text" name="message" placeholder="Message" id="message"><button type="submit">Send</button></form><script>const submitHandler = event => {document.getElementById("message").value = localStorage.getItem("username") + " : " + document.getElementById("message").value}</script>`);
     });
 });
 
